@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Upload file</title>
+  <style>
+    body {
+      background-color: #009688;
+    }
+    form {
+      margin: 50px auto;
+      padding: 20px;
+      max-width: 600px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      transform: translate3d(0, 0, 0);
+      transition: transform 0.3s ease;
+      margin-top: 330px;
+    }
+    form:hover {
+      transform: translate3d(0, -10px, 0);
+    }
+    label {
+      display: block;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      color: #009688;
+      text-align: center; /* добавлено */
+    }
+    input[type="file"] {
+      display: block;
+      margin: 20px auto;
+      padding: 10px;
+      width: 80%;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      background-color: #fff;
+      color: #009688;
+    }
+    input[type="submit"] {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border-radius: 10px;
+      border: none;
+      background-color: #009688;
+      color: #fff;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    input[type="submit"]:hover {
+      background-color: #fff;
+      color: #009688;
+    }
+  </style>
+</head>
+<body>
+  <form action="/read_and_predict/" method="POST" enctype="multipart/form-data">
+    <label for="file">Upload dataset</label>
+    <input type="file" id="file" name="file">
+    <input type="submit" value="Get predict">
+  </form>
+</body>
+</html>

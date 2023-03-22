@@ -1,0 +1,8 @@
+numpy==1.23.3
+pandas==1.4.4
+matplotlib==3.5.3
+seaborn==0.11.2
+fastapi==0.92.0
+uvicorn==0.20.0
+python-multipart==0.0.5
+catboost==1.1.1
