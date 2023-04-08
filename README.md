@@ -1,5 +1,7 @@
 # Прогнозирование мощности ветрогенератора
 
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzNjNDM1MjljZTQ0NzdjNzg3ZDdmOWViYmY3YTQ3ODA2M2QzMTYzMCZjdD1n/OnavQV9tvZVks/giphy.gif" alt="My Project GIF" width="900" height="500">
+
 Данный проект имеет целью создание API-приложения для прогнозирования мощности ветрогенератора на основе данных, полученных с помощью кейса [соревнования](https://datascience.totalenergies.com/fr/challenge/19/details#tab_brief84).  
 
 ## Исследование данных и создание модели
