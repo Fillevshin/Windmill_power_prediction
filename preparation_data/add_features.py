@@ -30,11 +30,14 @@ def add_basic_features(data: pd.DataFrame) -> pd.DataFrame:
     data['quarter'] = data['date'].dt.quarter
     data['hour'] = data['date'].dt.hour
     data['log_ws'] = np.log(data.ws + 1)
-    data['wd_direction'] = data.wd.apply(lambda x: 1 if x >= 338 and x < 360 else (
-        2 if x >= 23 and x < 68 else (3 if x >= 68 and x < 113 else (
-            4 if x >= 113 and x < 158 else (5 if x >= 158 and x < 203 else (
-                6 if x >= 203 and x < 248 else (
-                    7 if x >= 248 and x < 293 else (8 if x >= 293 and x < 338 else 1))))))))
+    data['wd_direction'] = data['wd'].apply(lambda x: 1 if 338 <= x < 360 else 2
+                                                      if 23 <= x < 68 else 3
+                                                      if 68 <= x < 113 else 4
+                                                      if 113 <= x < 158 else 5
+                                                      if 158 <= x < 203 else 6
+                                                      if 203 <= x < 248 else 7
+                                                      if 248 <= x < 293 else 8
+                                                      if 293 <= x < 338 else 1)
     data['power_of_direction'] = data.wd_direction.apply(
         lambda x: 1 if x in [5, 6] else (3 if x in [2, 3] else 2))
     data['wp_is_max'] = data.wd_direction.apply(lambda x: 1 if x in [2, 3] else 0)
